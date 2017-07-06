@@ -31,8 +31,8 @@ public class PersonServiceTest {
     }
     @Test
     public void personCanBeFind(){
-        when(personRepository.find(anyInt())).thenReturn(p);
-        personService.findById(anyInt());
+        when(personRepository.find(anyInt())).thenReturn(anyObject());
+        personService.findById(10);
         verify(personRepository).find(anyInt());
     }
     @Test
